@@ -232,5 +232,8 @@ $(function () {
   });
 });
 
+  display();
+};
+
 
 // Thank you - come again.
