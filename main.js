@@ -17,16 +17,12 @@ function red(message) {
 
 var banner = red(
 "Farhan Beg"+
-    "                                                                         \t\n"
+    "                                                                         \t\n\n\n"
 );
 
 const welcomeMessage = `Welcome to my portfolio fellow humans and bots.
 Type 'ls' to view a list of available commands..
 `;
-const starWarsMessage = `Star Wars: Episode IV produced by Simon Jansen (http://www.asciimation.co.nz)
-Press ctrl + z to stop.`;
-// Boolean to keep track of whether Star Wars is animating
-var play = false;
 
 function downloadURI(uri, name) {
   var link = document.createElement("a");
@@ -57,6 +53,7 @@ ${OUTPUT_STRING} https://github.com/f4b30/
 
 `,
   ls: `
+Wow, I thought the only people who would visit this site would be bots and spammers, guess I was wrong.
 Just type any of the commands below to get some more info. You can even type a few letters and press [tab] to autocomplete.
 
 ${OUTPUT_STRING}${glow("whois")}              - Know about me?
@@ -90,10 +87,10 @@ My contact details can be found by typing 'contact', and if you would like to ch
 ${glow(1)} Still working on some projects
 `,
   skills: `
-${OUTPUT_STRING}${glow("Azure")}               ##  [[g;#00DE12;]######################################]  ##
-${OUTPUT_STRING}${glow("Ethical hacking")}     ##  [[g;#D16200;]############]                            ##
-${OUTPUT_STRING}${glow("penetration testing")} ##  [[g;#D16200;]############]                            ##
-${OUTPUT_STRING}${glow("C ")}                  ##  [[g;#00DE12;]###########################]             ##
+  ${OUTPUT_STRING}${glow("Azure")}               ##  [[g;#00DE12;]######################################]  ##
+  ${OUTPUT_STRING}${glow("Ethical hacking")}     ##  [[g;#D16200;]############]                            ##
+  ${OUTPUT_STRING}${glow("penetration testing")} ##  [[g;#D16200;]############]                            ##
+  ${OUTPUT_STRING}${glow("C ")}                  ##  [[g;#00DE12;]###########################]             ##
 `,
   contact: `
 ${OUTPUT_STRING}${glow("Email")}            - farhanbeg30@proton.me
@@ -101,7 +98,7 @@ ${OUTPUT_STRING}${glow("Linkedin")}         - https://www.linkedin.com/in/farhan
 ${OUTPUT_STRING}${glow("Github")}           - https://github.com/f4b30/
 
 `,
-  certifications: `
+certifications: `
   ${OUTPUT_STRING}${glow("Microsoft SC-200(Certified Security Operations Analyst)")}
   ${OUTPUT_STRING}${glow("ISC2 CC(Certified in Cybersecurity)")}
   `,
@@ -132,10 +129,10 @@ var commands = {
   contact: function () {
     this.echo(messages.contact);
   },
+
   certifications: function(){
     this.echo(messages.certifications);
   },
-
 
   resume: function () {
     downloadURI(
@@ -151,20 +148,15 @@ var commands = {
     this.exec("repo");
     this.exec("contact");
     this.exec("certifications");
-    
   },
 
   clear: function () {
     this.clear();
 
     this.echo(banner);
-    play ? this.echo(starWarsMessage + "\n\n") : this.echo(welcomeMessage);
+    this.echo(welcomeMessage);
   },
 
-  // Wohoo you found the pretty awesome command that I didn't tell you about.
-  star_wars: function () {
-    initStarWars(this,red);
-  },
 };
 
 //-----------------------------------------------------------
@@ -211,21 +203,6 @@ $(function () {
       typed_message(term, welcomeMessage, 0, function () {});
     },
 
-    keydown: function (e) {        
-      // ctrl-z - Stop Star Wars
-      if (e.which == 90 && e.ctrlKey) {
-        play = false;
-        return false;
-      }
-
-      if (play) {
-        return false;
-      }
-
-      if (isTyping) {
-        return false;
-      }
-    },
 
     keypress: function (e, term) {
       console.log("keypress: " + e.which);
@@ -241,60 +218,5 @@ $(function () {
   });
 });
 
-// ---------------------------- STAR WARS
-
-var frames = [];
-var LINES_PER_FRAME = 14;
-var DELAY = 67;
-
-initStarWars = function (term) {
-  if (frames.length == 0 && play == false) {
-    term.echo("Loading...");
-    $.getScript("js/star_wars.js").done(function () {
-      play = true;
-      var lines = star_wars.length;
-      for (var i = 0; i < lines; i += LINES_PER_FRAME) {
-        frames.push(star_wars.slice(i, i + LINES_PER_FRAME));
-      }
-
-      playStarWars(term);
-    });
-  } else {
-    // frames have already been loaded
-    play = true;
-    playStarWars(term);
-  }
-};
-
-playStarWars = function (term, delay) {
-  var i = 0;
-  var next_delay;
-  if (delay == undefined) {
-    delay = DELAY;
-  }
-
-  function display() {
-    if (i == frames.length) {
-      i = 0;
-    }
-
-    term.clear();
-
-    if (frames[i][0].match(/[0-9]+/)) {
-      next_delay = frames[i][0] * delay;
-    } else {
-      next_delay = delay;
-    }
-    term.echo(frames[i++].slice(1).join("\n") + "\n");
-    if (play) {
-      setTimeout(display, next_delay);
-    } else {
-      term.clear();
-      i = 0;
-    }
-  }
-
-  display();
-};
 
 // Thank you - come again.
