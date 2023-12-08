@@ -10,12 +10,12 @@ var titleText = function (text) {
   return "[[u;inherit;]" + text + "]";
 };
 
-function teal(message) {
-  return "[[gb;teal;black]" + message + "]";
+function red(message) {
+  return "[[gb;red;black]" + message + "]";
 }
 //-----------------------------------------------------
 
-var banner = teal(
+var banner = red(
 "Farhan Beg"+
     "                                                                         \t\n\n\n"
 );
@@ -154,7 +154,7 @@ var commands = {
 
   // Wohoo you found the pretty awesome command that I didn't tell you about.
   star_wars: function () {
-    initStarWars(this);
+    initStarWars(this,red);
   },
 };
 
