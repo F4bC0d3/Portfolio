@@ -91,9 +91,9 @@ ${glow(1)} Still working on some projects
 `,
   skills: `
 ${OUTPUT_STRING}${glow("Azure")}               ##  [[g;#00DE12;]######################################]  ##
-${OUTPUT_STRING}${glow("Ethical hacking")}     ##  [[g;#42D100;]##################################]      ##
-${OUTPUT_STRING}${glow("penetration testing")} ##  [[g;#5BD100;]################################]        ##
-${OUTPUT_STRING}${glow("C ")}                  ##  [[g;#D16200;]####################]                         ##
+${OUTPUT_STRING}${glow("Ethical hacking")}     ##  [[g;#D16200;]############]                            ##
+${OUTPUT_STRING}${glow("penetration testing")} ##  [[g;#D16200;]############]                            ##
+${OUTPUT_STRING}${glow("C ")}                  ##  [[g;#00DE12;]###########################]             ##
 `,
   contact: `
 ${OUTPUT_STRING}${glow("Email")}            - farhanbeg30@proton.me
