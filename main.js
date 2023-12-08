@@ -17,7 +17,7 @@ function red(message) {
 
 var banner = red(
 "Farhan Beg"+
-    "\n\n"
+    "                                                                         \t\n"
 );
 
 const welcomeMessage = `Welcome to my portfolio fellow humans and bots.
