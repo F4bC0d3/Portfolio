@@ -10,12 +10,12 @@ var titleText = function (text) {
   return "[[u;inherit;]" + text + "]";
 };
 
-function red(message) {
-  return "[[gb;red;black]" + message + "]";
+function teal(message) {
+  return "[[gb;teal;black]" + message + "]";
 }
 //-----------------------------------------------------
 
-var banner = red(
+var banner = teal(
 "Farhan Beg"+
     "                                                                         \t\n\n\n"
 );
