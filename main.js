@@ -10,14 +10,13 @@ var titleText = function (text) {
   return "[[u;inherit;]" + text + "]";
 };
 
-function teal(message) {
-  return "[[gb;teal;black]" + message + "]";
+function red(message) {
+  return "[[gb;red;black]" + message + "]";
 }
 //-----------------------------------------------------
 
-var banner = teal(
+var banner = red(
 "Farhan Beg"+
-    getYear() +
     "                                                                         \t\n\n\n"
 );
 
