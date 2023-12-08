@@ -68,6 +68,7 @@ ${OUTPUT_STRING}${glow("repo")}               - Take a look at some of my work
 ${OUTPUT_STRING}${glow("download_resume")}    - Check out my resume
 
 ${OUTPUT_STRING}${glow("contact")}            - ping me
+${OUTPUT_STRING}${glow("certifications")}            - Certifications I hold
 ${OUTPUT_STRING}${glow("all")}                - Tell me everything
 
 
@@ -75,7 +76,7 @@ ${OUTPUT_STRING}${glow("all")}                - Tell me everything
   whois: `
 
 I am  ${glow("Farhan Beg")}.
-I'm a ${getAge("2001/30/30")} year old ${glow(
+I'm a ${getAge("2001/12/30")} year old ${glow(
     "Cyber security enthusiast"
   )} I am from India state of Uttar Pradesh. 
 I am currently pursueing my B.E. degree from Information Science in JSS Academy Of Technical Education,Bengaluru.
@@ -93,7 +94,7 @@ ${glow(1)} Still working on some projects
 ${OUTPUT_STRING}${glow("Azure")}              ##  [[g;#00DE12;]######################################]  ##
 ${OUTPUT_STRING}${glow("Ethical hacking")}     ##  [[g;#42D100;]##################################]      ##
 ${OUTPUT_STRING}${glow("penetration testing")} ##  [[g;#5BD100;]################################]        ##
-${OUTPUT_STRING}${glow("C ")}             ##  [[g;#D16200;]###########]                             ##
+${OUTPUT_STRING}${glow("C ")}             ##  [[g;#D16200;]####################]                         ##
 `,
   contact: `
 ${OUTPUT_STRING}${glow("Email")}            - farhanbeg30@proton.me
@@ -101,6 +102,11 @@ ${OUTPUT_STRING}${glow("Linkedin")}         - https://www.linkedin.com/in/farhan
 ${OUTPUT_STRING}${glow("Github")}           - https://github.com/f4b30/
 
 `,
+  certifications:`
+  ${OUTPUT_STRING}${glow("Microsoft SC-200(Certified Security Operations Analyst")}
+  ${OUTPUT_STRING}${glow("ISC2 CC(Certified in Cybersecurity")}
+  `
+    
 };
 
 var commands = {
@@ -127,6 +133,8 @@ var commands = {
   contact: function () {
     this.echo(messages.contact);
   },
+  certifications: function(){
+    this.echo(messages.certifications);
 
 
   download_resume: function () {
@@ -142,6 +150,7 @@ var commands = {
     this.exec("skills");
     this.exec("repo");
     this.exec("contact");
+    this.exec("certifications");
     
   },
 
