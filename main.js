@@ -84,7 +84,7 @@ Some of my interests include ${glow(
   )}. 
 
 please feel free to get in touch with me to discuss any cool opportunities!
-My contact details can be found by typing 'contact', and if you would like to check out my resume, simply type 'download_resume'.
+My contact details can be found by typing 'contact', and if you would like to check out my resume, simply type 'download-resume'.
 `,
   projects: `
 ${glow(1)} Still working on some projects
