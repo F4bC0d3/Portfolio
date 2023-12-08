@@ -19,7 +19,7 @@ var banner = red(
 "Farhan Beg"+
     "                                                                         \t\n"
 );
-
+banner = banner.replace("Farhan Beg", '<span style="font-size: 24px;">Farhan Beg</span>');
 const welcomeMessage = `Welcome to my portfolio fellow humans and bots.
 Type 'ls' to view a list of available commands..
 `;
