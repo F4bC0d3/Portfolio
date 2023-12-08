@@ -23,6 +23,8 @@ var banner = red(
 const welcomeMessage = `Welcome to my portfolio fellow humans and bots.
 Type 'ls' to view a list of available commands..
 `;
+const starWarsMessage = `Star Wars: Episode IV produced by Simon Jansen (http://www.asciimation.co.nz)
+Press ctrl + z to stop.`;
 // Boolean to keep track of whether Star Wars is animating
 var play = false;
 
@@ -62,7 +64,7 @@ ${OUTPUT_STRING}${glow("projects")}           - Yeah, I've made some cool stuff 
 ${OUTPUT_STRING}${glow("skills")}             - I'm pretty good at some things
 ${OUTPUT_STRING}${glow("repo")}               - Take a look at some of my work
 
-${OUTPUT_STRING}${glow("download-resume")}    - Check out my resume
+${OUTPUT_STRING}${glow("download_resume")}    - Check out my resume
 
 ${OUTPUT_STRING}${glow("contact")}            - ping me
 ${OUTPUT_STRING}${glow("certifications")}     - Certifications I hold
@@ -82,7 +84,7 @@ Some of my interests include ${glow(
   )}. 
 
 please feel free to get in touch with me to discuss any cool opportunities!
-My contact details can be found by typing 'contact', and if you would like to check out my resume, simply type 'download-resume'.
+My contact details can be found by typing 'contact', and if you would like to check out my resume, simply type 'download_resume'.
 `,
   projects: `
 ${glow(1)} Still working on some projects
@@ -135,7 +137,7 @@ var commands = {
   },
 
 
-  download-resume: function () {
+  download_resume: function () {
     downloadURI(
       "Resume-Farhan-Beg.pdf"
     );
