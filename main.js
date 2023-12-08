@@ -90,10 +90,10 @@ My contact details can be found by typing 'contact', and if you would like to ch
 ${glow(1)} Still working on some projects
 `,
   skills: `
-${OUTPUT_STRING}${glow("Azure")}              ##  [[g;#00DE12;]######################################]  ##
+${OUTPUT_STRING}${glow("Azure")}               ##  [[g;#00DE12;]######################################]  ##
 ${OUTPUT_STRING}${glow("Ethical hacking")}     ##  [[g;#42D100;]##################################]      ##
 ${OUTPUT_STRING}${glow("penetration testing")} ##  [[g;#5BD100;]################################]        ##
-${OUTPUT_STRING}${glow("C ")}             ##  [[g;#D16200;]####################]                         ##
+${OUTPUT_STRING}${glow("C ")}                  ##  [[g;#D16200;]####################]                         ##
 `,
   contact: `
 ${OUTPUT_STRING}${glow("Email")}            - farhanbeg30@proton.me
@@ -101,9 +101,9 @@ ${OUTPUT_STRING}${glow("Linkedin")}         - https://www.linkedin.com/in/farhan
 ${OUTPUT_STRING}${glow("Github")}           - https://github.com/f4b30/
 
 `,
-  certifications:`
-  ${OUTPUT_STRING}${glow("Microsoft SC-200(Certified Security Operations Analyst")}
-  ${OUTPUT_STRING}${glow("ISC2 CC(Certified in Cybersecurity")}
+  certifications: `
+  ${OUTPUT_STRING}${glow("Microsoft SC-200(Certified Security Operations Analyst)")}
+  ${OUTPUT_STRING}${glow("ISC2 CC(Certified in Cybersecurity)")}
   `,
     
 };
@@ -134,6 +134,7 @@ var commands = {
   },
   certifications: function(){
     this.echo(messages.certifications);
+  },
 
 
   download_resume: function () {
