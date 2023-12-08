@@ -64,7 +64,7 @@ ${OUTPUT_STRING}${glow("projects")}           - Yeah, I've made some cool stuff 
 ${OUTPUT_STRING}${glow("skills")}             - I'm pretty good at some things
 ${OUTPUT_STRING}${glow("repo")}               - Take a look at some of my work
 
-${OUTPUT_STRING}${glow("download_resume")}    - Check out my resume
+${OUTPUT_STRING}${glow("download-resume")}    - Check out my resume
 
 ${OUTPUT_STRING}${glow("contact")}            - ping me
 ${OUTPUT_STRING}${glow("certifications")}     - Certifications I hold
@@ -137,7 +137,7 @@ var commands = {
   },
 
 
-  download_resume: function () {
+  download-resume: function () {
     downloadURI(
       "Resume-Farhan-Beg.pdf"
     );
@@ -157,144 +157,5 @@ var commands = {
   clear: function () {
     this.clear();
 
-    this.echo(banner);
-    play ? this.echo(starWarsMessage + "\n\n") : this.echo(welcomeMessage);
-  },
-
-  // Wohoo you found the pretty awesome command that I didn't tell you about.
-  star_wars: function () {
-    initStarWars(this,red);
-  },
-};
-
-//-----------------------------------------------------------
-
-$(function () {
-  var isTyping = false;
-  function typed(finish_typing) {
-    return function (term, message, delay) {
-      isTyping = true;
-      var prompt = term.get_prompt();
-      var c = 0;
-      if (message.length > 0) {
-        term.set_prompt("");
-        var interval = setInterval(function () {
-          term.insert(message[c++]);
-          if (c == message.length) {
-            clearInterval(interval);
-            // execute in next interval
-            setTimeout(function () {
-              // swap command with prompt
-              finish_typing(term, message, prompt);
-              isTyping = false;
-            }, delay);
-          }
-        }, delay);
-      }
-    };
-  }
-
-  var typed_message = typed(function (term, message, prompt) {
-    term.set_command("");
-    term.echo(message);
-    term.set_prompt(prompt);
-  });
-
-  $("body").terminal(commands, {
-    greetings: banner,
-    prompt: "> ",
-    completion: true,
-    checkArity: false,
-    clear: false,
-
-    onInit: function (term) {
-      typed_message(term, welcomeMessage, 0, function () {});
-    },
-
-    keydown: function (e) {        
-      // ctrl-z - Stop Star Wars
-      if (e.which == 90 && e.ctrlKey) {
-        play = false;
-        return false;
-      }
-
-      if (play) {
-        return false;
-      }
-
-      if (isTyping) {
-        return false;
-      }
-    },
-
-    keypress: function (e, term) {
-      console.log("keypress: " + e.which);
-    },
-
-    onFocus: function (term) {
-      console.log("terminal has gained focus");
-    },
-
-    onBlur: function () {
-      console.log("terminal has lost focus");
-    },
-  });
-});
-
-// ---------------------------- STAR WARS
-
-var frames = [];
-var LINES_PER_FRAME = 14;
-var DELAY = 67;
-
-initStarWars = function (term) {
-  if (frames.length == 0 && play == false) {
-    term.echo("Loading...");
-    $.getScript("js/star_wars.js").done(function () {
-      play = true;
-      var lines = star_wars.length;
-      for (var i = 0; i < lines; i += LINES_PER_FRAME) {
-        frames.push(star_wars.slice(i, i + LINES_PER_FRAME));
-      }
-
-      playStarWars(term);
-    });
-  } else {
-    // frames have already been loaded
-    play = true;
-    playStarWars(term);
-  }
-};
-
-playStarWars = function (term, delay) {
-  var i = 0;
-  var next_delay;
-  if (delay == undefined) {
-    delay = DELAY;
-  }
-
-  function display() {
-    if (i == frames.length) {
-      i = 0;
-    }
-
-    term.clear();
-
-    if (frames[i][0].match(/[0-9]+/)) {
-      next_delay = frames[i][0] * delay;
-    } else {
-      next_delay = delay;
-    }
-    term.echo(frames[i++].slice(1).join("\n") + "\n");
-    if (play) {
-      setTimeout(display, next_delay);
-    } else {
-      term.clear();
-      i = 0;
-    }
-  }
-
-  display();
-};
 
 // Thank you - come again.
