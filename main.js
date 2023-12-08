@@ -57,7 +57,6 @@ ${OUTPUT_STRING} https://github.com/f4b30/
 
 `,
   ls: `
-Wow, I thought the only people who would visit this site would be bots and spammers, guess I was wrong.
 Just type any of the commands below to get some more info. You can even type a few letters and press [tab] to autocomplete.
 
 ${OUTPUT_STRING}${glow("whois")}              - Know about me?
@@ -68,7 +67,7 @@ ${OUTPUT_STRING}${glow("repo")}               - Take a look at some of my work
 ${OUTPUT_STRING}${glow("download_resume")}    - Check out my resume
 
 ${OUTPUT_STRING}${glow("contact")}            - ping me
-${OUTPUT_STRING}${glow("certifications")}            - Certifications I hold
+${OUTPUT_STRING}${glow("certifications")}     - Certifications I hold
 ${OUTPUT_STRING}${glow("all")}                - Tell me everything
 
 
@@ -105,7 +104,7 @@ ${OUTPUT_STRING}${glow("Github")}           - https://github.com/f4b30/
   certifications:`
   ${OUTPUT_STRING}${glow("Microsoft SC-200(Certified Security Operations Analyst")}
   ${OUTPUT_STRING}${glow("ISC2 CC(Certified in Cybersecurity")}
-  `
+  `,
     
 };
 
