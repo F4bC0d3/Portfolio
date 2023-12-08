@@ -19,9 +19,12 @@ var banner = red(
 "Farhan Beg"+
     "                                                                         \t\n"
 );
+
 const welcomeMessage = `Welcome to my portfolio fellow humans and bots.
 Type 'ls' to view a list of available commands..
 `;
+const starWarsMessage = `Star Wars: Episode IV produced by Simon Jansen (http://www.asciimation.co.nz)
+Press ctrl + z to stop.`;
 // Boolean to keep track of whether Star Wars is animating
 var play = false;
 
@@ -155,8 +158,14 @@ var commands = {
     this.clear();
 
     this.echo(banner);
-    this.echo(welcomeMessage);
+    play ? this.echo(starWarsMessage + "\n\n") : this.echo(welcomeMessage);
   },
+
+  // Wohoo you found the pretty awesome command that I didn't tell you about.
+  star_wars: function () {
+    initStarWars(this,red);
+  },
+};
 
 //-----------------------------------------------------------
 
@@ -231,6 +240,7 @@ $(function () {
     },
   });
 });
+
 // ---------------------------- STAR WARS
 
 var frames = [];
@@ -286,6 +296,5 @@ playStarWars = function (term, delay) {
 
   display();
 };
-
 
 // Thank you - come again.
