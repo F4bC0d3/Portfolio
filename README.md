@@ -1,1 +1,1 @@
-# [Personal portfolio](www.farhanbeg.me)
+# [Personal portfolio](https://www.farhanbeg.me)
