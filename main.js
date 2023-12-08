@@ -231,6 +231,58 @@ $(function () {
     },
   });
 });
+// ---------------------------- STAR WARS
+
+var frames = [];
+var LINES_PER_FRAME = 14;
+var DELAY = 67;
+
+initStarWars = function (term) {
+  if (frames.length == 0 && play == false) {
+    term.echo("Loading...");
+    $.getScript("js/star_wars.js").done(function () {
+      play = true;
+      var lines = star_wars.length;
+      for (var i = 0; i < lines; i += LINES_PER_FRAME) {
+        frames.push(star_wars.slice(i, i + LINES_PER_FRAME));
+      }
+
+      playStarWars(term);
+    });
+  } else {
+    // frames have already been loaded
+    play = true;
+    playStarWars(term);
+  }
+};
+
+playStarWars = function (term, delay) {
+  var i = 0;
+  var next_delay;
+  if (delay == undefined) {
+    delay = DELAY;
+  }
+
+  function display() {
+    if (i == frames.length) {
+      i = 0;
+    }
+
+    term.clear();
+
+    if (frames[i][0].match(/[0-9]+/)) {
+      next_delay = frames[i][0] * delay;
+    } else {
+      next_delay = delay;
+    }
+    term.echo(frames[i++].slice(1).join("\n") + "\n");
+    if (play) {
+      setTimeout(display, next_delay);
+    } else {
+      term.clear();
+      i = 0;
+    }
+  }
 
   display();
 };
