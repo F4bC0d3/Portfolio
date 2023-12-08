@@ -201,19 +201,7 @@ $(function () {
     },
 
     keydown: function (e) {        
-      // ctrl-z - Stop Star Wars
-      if (e.which == 90 && e.ctrlKey) {
-        play = false;
-        return false;
-      }
-
-      if (play) {
-        return false;
-      }
-
-      if (isTyping) {
-        return false;
-      }
+     
     },
 
     keypress: function (e, term) {
@@ -230,6 +218,4 @@ $(function () {
   });
 });
 
- display();
-};
 // Thank you - come again.
