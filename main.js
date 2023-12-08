@@ -16,14 +16,7 @@ function teal(message) {
 //-----------------------------------------------------
 
 var banner = teal(
-"\t  ________                                   ________               .__     .__       \t\n" +
-  "\t /  _____/  ____    __________    ___   ___  \\_______\\  _______  _ |__| ____|_/  \t\n" +
-  "\t/   \\  ____/ __ \\  / _ \\_   __\\ / __ \\_/ _ \\ |      | \\ \\_   \\ \\ / /   |     |               \t\n" +
-  "\t\\    \\_\\  /\\  ___(  <_>  )  | \\/ /_/   > __/ |       . \\/     \\   / |  /     |\t\n" +
-  "\t \\______  / \\___  >|____/|__|  \\__    / \\___ >_______   (___  /\\_/  |__\\____ |    \t\n" +
-  "\t        \\/      \\/             / ____/      \\/        \\/    \\/              \\/   \t\n" +
-  "\t                                                                                 \t\n"+
-  "\t      \u00A9 " +
+"Farhan Beg"+
     getYear() +
     "                                                                         \t\n\n\n"
 );
@@ -61,7 +54,7 @@ function getYear() {
 }
 const messages = {
   repo: `
-${OUTPUT_STRING} https://github.com/George-1100/
+${OUTPUT_STRING} https://github.com/f4b30/
 
 `,
   ls: `
@@ -82,38 +75,31 @@ ${OUTPUT_STRING}${glow("all")}                - Tell me everything
 `,
   whois: `
 
-I am  ${glow("George David")}.
-I'm a ${getAge("2003/03/15")} year old ${glow(
-    "Cyber security resercher"
-  )} I am from India state of Tamil Nadu. 
-I am currently pursueing my BSc degree in Information security and digital forensics in Karunya institute of technology and sciences.
-Working at zoho organization as a intern.
+I am  ${glow("Farhan Beg")}.
+I'm a ${getAge("2001/30/30")} year old ${glow(
+    "Cyber security enthusiast"
+  )} I am from India state of Uttar Pradesh. 
+I am currently pursueing my B.E. degree from Information Science in JSS Academy Of Technical Education,Bengaluru.
 Some of my interests include ${glow(
-    "machine learning, cyber security, and blockchain"
+    "Cyber Security,Technology"
   )}. 
 
 please feel free to get in touch with me to discuss any cool opportunities!
 My contact details can be found by typing 'contact', and if you would like to check out my resume, simply type 'download_resume'.
 `,
   projects: `
-${glow(1)} I have done arduino based railway platform security project.
-${glow(2)} open-python based iris detection project
-${glow(3)} C# based keylogger project. 
-${glow(4)} I have done 1 month internship at Kaashiv infotech chennai.  
-${glow(5)} check out a few of my public repos? Just type 'repo' to get the links.
+${glow(1)} Still working on some projects
 `,
   skills: `
-${OUTPUT_STRING}${glow("Python")}              ##  [[g;#00DE12;]######################################]  ##
+${OUTPUT_STRING}${glow("Azure")}              ##  [[g;#00DE12;]######################################]  ##
 ${OUTPUT_STRING}${glow("Ethical hacking")}     ##  [[g;#42D100;]##################################]      ##
 ${OUTPUT_STRING}${glow("penetration testing")} ##  [[g;#5BD100;]################################]        ##
-${OUTPUT_STRING}${glow("C & C++")}             ##  [[g;#D16200;]###########]                             ##
-${OUTPUT_STRING}${glow( "Unitiy Engine")}       ##  [[g;#99D100;]####]                                    ##
-${OUTPUT_STRING}${glow("solidity")}            ##  [[g;#D1B900;]###]                                     ##
+${OUTPUT_STRING}${glow("C ")}             ##  [[g;#D16200;]###########]                             ##
 `,
   contact: `
-${OUTPUT_STRING}${glow("Email")}            - georgedavid.work@gmail.com
-${OUTPUT_STRING}${glow("Linkedin")}         - https://www.linkedin.com/in/georgedavidd
-${OUTPUT_STRING}${glow("Github")}           - https://github.com/George-1100/
+${OUTPUT_STRING}${glow("Email")}            - farhanbeg30@proton.me
+${OUTPUT_STRING}${glow("Linkedin")}         - https://www.linkedin.com/in/farhan-beg-3b0b3a1b3/farhan-beg
+${OUTPUT_STRING}${glow("Github")}           - https://github.com/f4b30/
 
 `,
 };
@@ -146,7 +132,7 @@ var commands = {
 
   download_resume: function () {
     downloadURI(
-      "Georgedavid resume.pdf"
+      "Resume-Farhan-Beg.pdf"
     );
   },
 
