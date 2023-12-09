@@ -89,7 +89,7 @@ async function getInputValue(){
     createCode("contact","Ping me");
     createCode("certifications","certifications I hold")
     createCode("all","everything about me");
-    // createCode("clear", "Clean the terminal");
+    createCode("clear", "Clean the terminal");
     
   }
   /*
@@ -110,10 +110,10 @@ async function getInputValue(){
   }
   else if(value.toLowerCase() == "skills"){
     trueValue(value);
-    createTextAndProgressBar("Azure",0.7,"green");
+    createTextAndProgressBar("Azure",0.7,"#0dfa05");
     createTextAndProgressBar("Ethical Hacking",0.3,"yellow");
     createTextAndProgressBar("Penetration Testing",0.2,"yellow");
-    createTextAndProgressBar("C",0.8,"green");
+    createTextAndProgressBar("C",0.8,"#0dfa05");
     
   }
   else if(value.toLowerCase() =="certifications"){
@@ -131,16 +131,18 @@ async function getInputValue(){
     createText("<a href='mailto:farhanbeg30@proton.me' target='_blank'><i class='fa-solid fa-envelope-open-text'></i> Email</a>")
     createText("<a href='https://www.linkedin.com/in/farhan-beg/' target='_blank'><i class='fab fa-linkedin-in white'></i> Linkedin</a>")
     createText("<a href='https://www.x.com/_Farhan_b' target='_blank'><i class='fa-brands fa-x-twitter'></i> X </a>")
-    createTextAndProgressBar("Azure",0.7,"green");
+    createTextAndProgressBar("Azure",0.7,"#0dfa05");
     createTextAndProgressBar("Ethical Hacking",0.3,"yellow");
     createTextAndProgressBar("Penetration Testing",0.2,"yellow");
-    createTextAndProgressBar("C",0.8,"green");
+    createTextAndProgressBar("C",0.8,"#0dfa05");
     createText("<a href='https://www.credly.com/badges/530834d1-6bc0-4437-a275-257a9bd0d791/public_url' target='_blank'><i class='fa-brands fa-microsoft'></i> Microsoft SC-200(Security Operations Analyst) </a>")
     createText("<a href='https://www.credly.com/badges/46b645b3-9609-44c6-8a72-af7a1e1e0a43/public_url' target='_blank'><i class='fa-regular fa-file-certificate'></i> ISC2 CC(Certified in Cybersecurity) </a>")
   }
   else if(value.toLowerCase() === "clear"){
     document.querySelectorAll("p").forEach(e => e.parentNode.removeChild(e));
     document.querySelectorAll("section").forEach(e => e.parentNode.removeChild(e));
+    document.querySelectorAll("#app .clearable").forEach(e => e.parentNode.removeChild(e));
+    document.querySelectorAll("#app .type2").forEach(e => e.parentNode.removeChild(e));
   }
   else{
     falseValue(value);
@@ -197,7 +199,7 @@ function createColoredText(text, color = "") {
 
 function createTextAndProgressBar(text, progress, progressBarColor) {
   const container = document.createElement("div");
-  container.classList.add("text-progress-container");
+  container.classList.add("text-progress-container", "clearable");
 
   // Text on the left
   const textNode = document.createTextNode(text);
@@ -225,7 +227,6 @@ function createTextAndProgressBar(text, progress, progressBarColor) {
 
   app.appendChild(container);
 }
-
 
 function createCode(code, text){
   const p = document.createElement("p");
