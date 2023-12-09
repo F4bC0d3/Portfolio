@@ -57,25 +57,24 @@ function getYear() {
   return today.getFullYear();
 }
 const messages = {
-  repo: `
+ /*  repo: `
 ${OUTPUT_STRING} https://github.com/f4b30/
-
 `,
+*/
+ /*
+add these later
+${OUTPUT_STRING}${glow("projects")}           - Yeah, I've made some cool stuff before
+${OUTPUT_STRING}${glow("repo")} - Take a look at some of my work
+*/
   ls: `
 Just type any of the commands below to get some more info. You can even type a few letters and press [tab] to autocomplete.
 
 ${OUTPUT_STRING}${glow("whois")}              - Know about me?
-${OUTPUT_STRING}${glow("projects")}           - Yeah, I've made some cool stuff before
 ${OUTPUT_STRING}${glow("skills")}             - I'm pretty good at some things
-${OUTPUT_STRING}${glow("repo")}               - Take a look at some of my work
-
 ${OUTPUT_STRING}${glow("resume")}             - Check out my resume
-
 ${OUTPUT_STRING}${glow("contact")}            - ping me
 ${OUTPUT_STRING}${glow("certifications")}     - Certifications I hold
 ${OUTPUT_STRING}${glow("all")}                - Tell me everything
-
-
 `,
   whois: `
 
@@ -91,9 +90,10 @@ Some of my interests include ${glow(
 please feel free to get in touch with me to discuss any opportunities!
 My contact details can be found by typing 'contact', and if you would like to check out my resume, simply type 'resume'.
 `,
-  projects: `
+/*projects: `
 ${glow(1)} Still working on some projects
 `,
+*/
   skills: `
   ${OUTPUT_STRING}${glow("Azure")}               ##  [[g;#00DE12;]######################################]  ##
   ${OUTPUT_STRING}${glow("Ethical hacking")}     ##  [[g;#D16200;]############]                            ##
@@ -107,8 +107,8 @@ ${OUTPUT_STRING}${glow("Github")}           - https://github.com/f4b30/
 
 `,
 certifications: `
-  ${OUTPUT_STRING}${glow("Microsoft SC-200(Certified Security Operations Analyst)")}
-  ${OUTPUT_STRING}${glow("ISC2 CC(Certified in Cybersecurity)")}
+  ${OUTPUT_STRING}${glow("Microsoft SC-200(Certified Security Operations Analyst)")} - https://www.credly.com/badges/530834d1-6bc0-4437-a275-257a9bd0d791/public_url
+  ${OUTPUT_STRING}${glow("ISC2 CC(Certified in Cybersecurity)")}                     - https://www.credly.com/badges/46b645b3-9609-44c6-8a72-af7a1e1e0a43/public_url
   `,
     
 };
@@ -118,18 +118,18 @@ var commands = {
     this.echo(messages.ls);
   },
 
-  repo: function () {
+ /* repo: function () {
     this.echo(messages.repo);
   },
-
+*/
   whois: function () {
     this.echo(messages.whois);
   },
 
-  projects: function () {
+ /* projects: function () {
     this.echo(messages.projects);
   },
-
+*/
   skills: function () {
     this.echo(messages.skills);
   },
@@ -150,10 +150,10 @@ var commands = {
 
   all: function () {
     this.clear();
-    this.exec("whois");
+   // this.exec("whois");
     this.exec("projects");
     this.exec("skills");
-    this.exec("repo");
+    //this.exec("repo");
     this.exec("contact");
     this.exec("certifications");
   },
