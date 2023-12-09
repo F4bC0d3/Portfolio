@@ -104,7 +104,6 @@ ${glow(1)} Still working on some projects
   contact: `
 ${OUTPUT_STRING}${glow("Email")}            - farhanbeg30@proton.me
 ${OUTPUT_STRING}${glow("Linkedin")}         - https://www.linkedin.com/in/farhan-beg-3b0b3a1b3/farhan-beg
-${OUTPUT_STRING}${glow("Github")}           - https://github.com/f4b30/
 
 `,
 certifications: `
