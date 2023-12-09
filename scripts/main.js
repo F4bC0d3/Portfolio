@@ -83,13 +83,13 @@ async function getInputValue(){
   const value = document.querySelector("input").value;
   if(value.toLowerCase() === "ls"){
     trueValue(value);
-    createCode("whois", "Who am i and what do i do.");
-    createCode("skills","I'm pretty good at some things.");
-    createCode("resume", "Check out my resume.(it will get downloaded in pdf form)");
+    createCode("whois", "Who am i and what do i do");
+    createCode("skills","I'm pretty good at some things");
+    createCode("resume", "Check out my resume(it will get downloaded in pdf form)");
     createCode("contact","Ping me");
-    createCode("certifications","certifications I hold.")
+    createCode("certifications","certifications I hold")
     createCode("all","everything about me");
-    createCode("clear", "Clean the terminal.");
+    createCode("clear", "Clean the terminal");
     
   }
   /*
