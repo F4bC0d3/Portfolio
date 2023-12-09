@@ -150,8 +150,8 @@ var commands = {
 
   all: function () {
     this.clear();
-   // this.exec("whois");
-    this.exec("projects");
+    this.exec("whois");
+    //this.exec("projects");
     this.exec("skills");
     //this.exec("repo");
     this.exec("contact");
