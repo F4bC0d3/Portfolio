@@ -83,13 +83,13 @@ async function getInputValue(){
   const value = document.querySelector("input").value;
   if(value.toLowerCase() === "ls"){
     trueValue(value);
-    createCode("whois", "Who am i and what do i do");
-    createCode("skills","I'm pretty good at some things");
-    createCode("resume", "Check out my resume(it will get downloaded in pdf form)");
+    createCode("whois", "Who am I and what do I do");
+    createCode("skills","Things I'm pretty good at");
+    createCode("resume", "Check out my resume (It will get downloaded in pdf form)");
     createCode("contact","Ping me");
     createCode("certifications","certifications I hold")
     createCode("all","everything about me");
-    createCode("clear", "Clean the terminal");
+    // createCode("clear", "Clean the terminal");
     
   }
   /*
@@ -100,7 +100,7 @@ async function getInputValue(){
   */
   else if(value.toLowerCase() === "whois"){
     trueValue(value);
-    createText(`I am Farhan Beg I'm a ${getAge("2001/12/30")} year old Cyber security enthusiast I am from Uttar Pradesh,India I am currently pursuing my B.E. degree from Information Science in JSS Academy Of Technical Education,Bengaluru. Some of my interests include Cyber Security,Technology and gamingplease feel free to get in touch with me to discuss any opportunities!My contact details can be found by typing 'contact', and if you would like to check out my resume, simply type 'resume'.`)
+    createText(`I am Farhan Beg ${getAge("2001/12/30")} year old Cyber security enthusiast from Uttar Pradesh,India. I am currently pursuing my B.E.(Bachelor of Engineering) degree from Information Science in JSS Academy Of Technical Education,Bengaluru. Some of my interests include Cyber Security,Technology and gaming. Please feel free to get in touch with me to discuss any opportunity! My contact details can be found by typing 'contact', and if you would like to check out my resume, simply type 'resume'.`)
   }
   else if(value.toLowerCase() === "contact"){
     trueValue(value);
