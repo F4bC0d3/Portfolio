@@ -81,7 +81,7 @@ function removeInput(){
 async function getInputValue(){
   
   const value = document.querySelector("input").value;
-  if(value === "ls"){
+  if(value.toLowerCase() === "ls"){
     trueValue(value);
     createCode("whois", "Who am i and what do i do.");
     createCode("skills","I'm pretty good at some things.");
@@ -93,22 +93,22 @@ async function getInputValue(){
     
   }
   /*
-  else if(value === "projects"){
+  else if(value.toLowerCase() === "projects"){
     trueValue(value);
     createText("<a href='https://github.com/heberleonard2' target='_blank'><i class='fab fa-github white'></i> github.com/heberleonard2</a>")
   }
   */
-  else if(value === "whois"){
+  else if(value.toLowerCase() === "whois"){
     trueValue(value);
     createText(`I am Farhan Beg I'm a ${getAge("2001/12/30")} year old Cyber security enthusiast I am from Uttar Pradesh,India I am currently pursuing my B.E. degree from Information Science in JSS Academy Of Technical Education,Bengaluru. Some of my interests include Cyber Security,Technology and gamingplease feel free to get in touch with me to discuss any opportunities!My contact details can be found by typing 'contact', and if you would like to check out my resume, simply type 'resume'.`)
   }
-  else if(value === "contact"){
+  else if(value.toLowerCase() === "contact"){
     trueValue(value);
     createText("<a href='mailto:farhanbeg30@proton.me' target='_blank'><i class='fa-solid fa-envelope-open-text'></i> Email</a>")
     createText("<a href='https://www.linkedin.com/in/farhan-beg/' target='_blank'><i class='fab fa-linkedin-in white'></i> Linkedin</a>")
     createText("<a href='https://www.x.com/_Farhan_b' target='_blank'><i class='fa-brands fa-x-twitter'></i> X </a>")
   }
-  else if(value== "skills"){
+  else if(value.toLowerCase() == "skills"){
     trueValue(value);
     createTextAndProgressBar("Azure",0.7,"green");
     createTextAndProgressBar("Ethical Hacking",0.3,"yellow");
@@ -116,16 +116,16 @@ async function getInputValue(){
     createTextAndProgressBar("C",0.8,"green");
     
   }
-  else if(value=="certifications"){
+  else if(value.toLowerCase() =="certifications"){
     trueValue(value);
     createText("<a href='https://www.credly.com/badges/530834d1-6bc0-4437-a275-257a9bd0d791/public_url' target='_blank'><i class='fa-brands fa-microsoft'></i> Microsoft SC-200(Security Operations Analyst) </a>")
     createText("<a href='https://www.credly.com/badges/46b645b3-9609-44c6-8a72-af7a1e1e0a43/public_url' target='_blank'><i class='fa-regular fa-file-certificate'></i> ISC2 CC(Certified in Cybersecurity) </a>")
   }
-  else if(value== "resume"){
+  else if(value.toLowerCase() == "resume"){
     trueValue(value);
     downloadURI("Resume-Farhan-Beg.pdf")
   }
-  else if(value=="all"){
+  else if(value.toLowerCase() =="all"){
     trueValue(value);
     createText(`I am Farhan Beg I'm a ${getAge("2001/12/30")} year old Cyber security enthusiast I am from Uttar Pradesh,India I am currently pursuing my B.E. degree from Information Science in JSS Academy Of Technical Education,Bengaluru. Some of my interests include Cyber Security,Technology and gamingplease feel free to get in touch with me to discuss any opportunities!My contact details can be found by typing 'contact', and if you would like to check out my resume, simply type 'resume'.`)
     createText("<a href='mailto:farhanbeg30@proton.me' target='_blank'><i class='fa-solid fa-envelope-open-text'></i> Email</a>")
@@ -138,7 +138,7 @@ async function getInputValue(){
     createText("<a href='https://www.credly.com/badges/530834d1-6bc0-4437-a275-257a9bd0d791/public_url' target='_blank'><i class='fa-brands fa-microsoft'></i> Microsoft SC-200(Security Operations Analyst) </a>")
     createText("<a href='https://www.credly.com/badges/46b645b3-9609-44c6-8a72-af7a1e1e0a43/public_url' target='_blank'><i class='fa-regular fa-file-certificate'></i> ISC2 CC(Certified in Cybersecurity) </a>")
   }
-  else if(value === "clear"){
+  else if(value.toLowerCase() === "clear"){
     document.querySelectorAll("p").forEach(e => e.parentNode.removeChild(e));
     document.querySelectorAll("section").forEach(e => e.parentNode.removeChild(e));
   }
