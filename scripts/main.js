@@ -95,7 +95,7 @@ async function getInputValue(){
   */
   else if(value.toLowerCase() === "whois"){
     trueValue(value);
-    createText(`I am Farhan Beg ${getAge("2001/12/30")} year old Cyber security enthusiast from Uttar Pradesh,India. I am currently pursuing my B.E.(Bachelor of Engineering) degree from Information Science in JSS Academy Of Technical Education,Bengaluru. Some of my interests include Cyber Security,Technology and gaming. Please feel free to get in touch with me to discuss any opportunity! My contact details can be found by typing 'contact', and if you would like to check out my resume, simply type 'resume'.`)
+    createText(`I am Farhan Beg a ${getAge("2001/12/30")} year old Cyber security enthusiast from Uttar Pradesh,India. I am currently pursuing my B.E.(Bachelor of Engineering) degree from Information Science in JSS Academy Of Technical Education,Bengaluru. Some of my interests include Cyber Security,Technology and gaming. Please feel free to get in touch with me to discuss any opportunity! My contact details can be found by typing 'contact', and if you would like to check out my resume, simply type 'resume'.`)
   }
   else if(value.toLowerCase() === "contact"){
     trueValue(value);
@@ -123,7 +123,7 @@ async function getInputValue(){
   else if(value.toLowerCase() =="all"){
     trueValue(value);
     createColoredText("Introduction:","#9CEAF3")
-    createText(`I am Farhan Beg ${getAge("2001/12/30")} year old Cyber security enthusiast from Uttar Pradesh,India. I am currently pursuing my B.E.(Bachelor of Engineering) degree from Information Science in JSS Academy Of Technical Education,Bengaluru. Some of my interests include Cyber Security,Technology and gaming. Please feel free to get in touch with me to discuss any opportunity! My contact details can be found by typing 'contact', and if you would like to check out my resume, simply type 'resume'.`)
+    createText(`I am Farhan Beg a ${getAge("2001/12/30")} year old Cyber security enthusiast from Uttar Pradesh,India. I am currently pursuing my B.E.(Bachelor of Engineering) degree from Information Science in JSS Academy Of Technical Education,Bengaluru. Some of my interests include Cyber Security,Technology and gaming. Please feel free to get in touch with me to discuss any opportunity! My contact details can be found by typing 'contact', and if you would like to check out my resume, simply type 'resume'.`)
     createColoredText("Contact:","#9CEAF3")
     createText("<a href='mailto:farhanbeg30@proton.me' target='_blank'><i class='fa-solid fa-envelope-open-text'></i> Email</a>")
     createText("<a href='https://www.linkedin.com/in/farhan-beg/' target='_blank'><i class='fab fa-linkedin-in white'></i> Linkedin</a>")
