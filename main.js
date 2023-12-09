@@ -16,8 +16,17 @@ function red(message) {
 //-----------------------------------------------------
 
 var banner = red(
-"Farhan Beg"+
-    "                                                                         \t\n"
+  "  " + red(
+      "oooooooooooo                    oooo                                ooooooooooo.                       \n" +
+      "  `888'     `8                    `888                                 `888'   `Y8b                      \n" +
+      "   888          .oooo.   oooo d8b  888 .oo.    .oooo.   ooo. .oo.       888     888  .ooooo.   .oooooooo \n" +
+      "   888oooo8    `P  )88b  `888\"8P   888P\"Y88b  `P  )88b  `888P\"Y88b      888oooo888' d88' `88b 888' `88b  \n" +
+      "   888    \"     .oP\"888   888      888   888   .oP\"888   888   888      888    `88b 888ooo888 888   888  \n" +
+      "   888         d8(  888   888      888   888  d8(  888   888   888      888    .88P 888    .o `88bod8P'  \n" +
+      "  o888o        `Y888\"8o  d888b    o888o o888o `Y888\"8o  o888o o888o   oo888bood8P'  `Y8bod8P' `8oooooo.    \n" +
+      "                                                                                              d\"     YD    \n" +
+      "                                                                                              \"Y88888P'    \n"
+  ) 
 );
 
 const welcomeMessage = `Welcome to my portfolio fellow humans and bots.
