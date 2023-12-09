@@ -104,7 +104,7 @@ async function getInputValue(){
   }
   else if(value === "contact"){
     trueValue(value);
-    createText("<a href='farhanbeg30@proton.me' target='_blank'><i class='fa-solid fa-envelope-open-text'></i> Email</a>")
+    createText("<a href='mailto:farhanbeg30@proton.me' target='_blank'><i class='fa-solid fa-envelope-open-text'></i> Email</a>")
     createText("<a href='https://www.linkedin.com/in/farhan-beg/' target='_blank'><i class='fab fa-linkedin-in white'></i> Linkedin</a>")
     createText("<a href='https://www.x.com/_Farhan_b' target='_blank'><i class='fa-brands fa-x-twitter'></i> X </a>")
   }
@@ -128,7 +128,7 @@ async function getInputValue(){
   else if(value=="all"){
     trueValue(value);
     createText(`I am Farhan Beg I'm a ${getAge("2001/12/30")} year old Cyber security enthusiast I am from Uttar Pradesh,India I am currently pursuing my B.E. degree from Information Science in JSS Academy Of Technical Education,Bengaluru. Some of my interests include Cyber Security,Technology and gamingplease feel free to get in touch with me to discuss any opportunities!My contact details can be found by typing 'contact', and if you would like to check out my resume, simply type 'resume'.`)
-    createText("<a href='farhanbeg30@proton.me' target='_blank'><i class='fa-solid fa-envelope-open-text'></i> Email</a>")
+    createText("<a href='mailto:farhanbeg30@proton.me' target='_blank'><i class='fa-solid fa-envelope-open-text'></i> Email</a>")
     createText("<a href='https://www.linkedin.com/in/farhan-beg/' target='_blank'><i class='fab fa-linkedin-in white'></i> Linkedin</a>")
     createText("<a href='https://www.x.com/_Farhan_b' target='_blank'><i class='fa-brands fa-x-twitter'></i> X </a>")
     createTextAndProgressBar("Azure",0.7,"green");
