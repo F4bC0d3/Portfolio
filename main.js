@@ -31,6 +31,7 @@ var banner = red(
 
 const welcomeMessage = `Welcome to my portfolio fellow humans and bots.
 Type 'ls' to view a list of available commands..
+Tip: If viewing on mobile devices please use desktop mode
 `;
 
 function downloadURI(uri, name) {
