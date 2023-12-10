@@ -41,7 +41,6 @@ async function open_terminal(){
   await delay(700);
   createText("Fellow humans and bots please follow the instuctions below.");
   createText("Type 'ls' to list all commands..");
-
   await delay(500);
   new_line();
 }
