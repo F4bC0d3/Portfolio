@@ -82,6 +82,7 @@ async function getInputValue(){
     createCode("resume", "Check out my resume (It will get downloaded in pdf form)");
     createCode("contact","Ping me");
     createCode("certifications","certifications I hold")
+    createCode("hacking-socials","my profile on hacking platforms")
     createCode("all","everything about me");
     createCode("clear", "Clean the terminal");
     
@@ -89,52 +90,61 @@ async function getInputValue(){
   /*
   else if(value.toLowerCase() === "projects"){
     trueValue(value);
-    createText("<a href='https://github.com/heberleonard2' target='_blank'><i class='fab fa-github white'></i> github.com/heberleonard2</a>")
+    createText("<a href='https://github.com/h' target='_blank'><i class='fab fa-github white'></i> github.com/</a>")
   }
   */
   else if(value.toLowerCase() === "whois"){
     trueValue(value);
-    createText(`I am Farhan Beg a ${getAge("2001/12/30")} year old Cyber security enthusiast from Uttar Pradesh,India. I am currently pursuing my B.E.(Bachelor of Engineering) degree from Information Science in JSS Academy Of Technical Education,Bengaluru. Some of my interests include Cyber Security,Technology and gaming. Please feel free to get in touch with me to discuss any opportunity! My contact details can be found by typing 'contact', and if you would like to check out my resume, simply type 'resume'.`)
+    createText(`I am Farhan Beg a ${getAge("2001/12/30")} year old Cyber security enthusiast from India. I am currently pursuing my B.E.(Bachelor of Engineering) degree from Information Science in JSS Academy Of Technical Education,Bengaluru. Some of my interests include Cyber Security,Technology and gaming. Please feel free to get in touch with me to discuss any opportunity! My contact details can be found by typing 'contact', and if you would like to check out my resume, simply type 'resume'.`)
   }
   else if(value.toLowerCase() === "contact"){
     trueValue(value);
     createText("<a href='mailto:farhanbeg30@proton.me' target='_blank'><i class='fa-solid fa-envelope-open-text'></i> Email</a>")
     createText("<a href='https://www.linkedin.com/in/farhan-beg/' target='_blank'><i class='fab fa-linkedin-in white'></i> Linkedin</a>")
     createText("<a href='https://www.x.com/_Farhan_b' target='_blank'><i class='fa-brands fa-x-twitter'></i> X </a>")
+    createText("<a href='https://infosec.exchange/@Farhan30' target='_blank'><i class='fa-brands fa-mastodon'></i> Mastodon </a>")
   }
   else if(value.toLowerCase() == "skills"){
     trueValue(value);
     createTextAndProgressBar("Azure",0.7,"#0dfa05");
-    createTextAndProgressBar("Ethical Hacking",0.3,"yellow");
     createTextAndProgressBar("Penetration Testing",0.2,"yellow");
+    createTextAndProgressBar("Linux",0.8,"#0dfa05");
     createTextAndProgressBar("C",0.8,"#0dfa05");
+    createText("<b><u>Other Skills:</b></u><br> Cyber-security, Information Security, Microsoft 365 Defender, Security Operations, Network Security, Access Control, Disaster Recovery, Incident Response, BusinessContinuity,Azure Logic Apps, Kusto Query Language (KQL), Azure Sentinel, Azure Active Directory,Markdown,HTML")
     
   }
   else if(value.toLowerCase() =="certifications"){
     trueValue(value);
     createText("<a href='https://www.credly.com/badges/530834d1-6bc0-4437-a275-257a9bd0d791/public_url' target='_blank'><i class='fa-brands fa-microsoft'></i> Microsoft SC-200(Security Operations Analyst) </a>")
-    createText("<a href='https://www.credly.com/badges/46b645b3-9609-44c6-8a72-af7a1e1e0a43/public_url' target='_blank'><i class='fa-regular fa-file-certificate'></i> ISC2 CC(Certified in Cybersecurity) </a>")
+    createText("<a href='https://www.credly.com/badges/46b645b3-9609-44c6-8a72-af7a1e1e0a43/public_url' target='_blank'><i class='fa-solid fa-file-lines'></i> ISC2 CC(Certified in Cybersecurity) </a>")
+  }
+  else if(value.toLowerCase() =="hacking-socials"){
+    trueValue(value);
+    createText("<a href='https://tryhackme.com/p/F4bDcod3' target='_blank'> <u>TryHackMe<u></a>")
   }
   else if(value.toLowerCase() == "resume"){
     trueValue(value);
-    downloadURI("Resume-Farhan-Beg.pdf")
+    downloadURI("Resume.pdf")
   }
   else if(value.toLowerCase() =="all"){
     trueValue(value);
     createColoredText("Introduction:","#9CEAF3")
-    createText(`I am Farhan Beg a ${getAge("2001/12/30")} year old Cyber security enthusiast from Uttar Pradesh,India. I am currently pursuing my B.E.(Bachelor of Engineering) degree from Information Science in JSS Academy Of Technical Education,Bengaluru. Some of my interests include Cyber Security,Technology and gaming. Please feel free to get in touch with me to discuss any opportunity! My contact details can be found by typing 'contact', and if you would like to check out my resume, simply type 'resume'.`)
+    createText(`I am Farhan Beg a ${getAge("2001/12/30")} year old Cyber security enthusiast from India. I am currently pursuing my B.E.(Bachelor of Engineering) degree from Information Science in JSS Academy Of Technical Education,Bengaluru. Some of my interests include Cyber Security,Technology and gaming. Please feel free to get in touch with me to discuss any opportunity! My contact details can be found by typing 'contact', and if you would like to check out my resume, simply type 'resume'.`)
+    createColoredText("Skills:","#9CEAF3")
+    createTextAndProgressBar("Azure",0.7,"#0dfa05");
+    createTextAndProgressBar("Penetration Testing",0.2,"yellow");
+    createTextAndProgressBar("C",0.8,"#0dfa05");
+    createText("<b><u>Other Skills:</b></u><br> Cyber-security, Information Security, Microsoft 365 Defender, Security Operations, Network Security, Access Control, Disaster Recovery, Incident Response, BusinessContinuity,Azure Logic Apps, Kusto Query Language (KQL), Azure Sentinel, Azure Active Directory,Markdown,HTML")
+    createColoredText("Certifications:","#9CEAF3")
+    createText("<a href='https://www.credly.com/badges/530834d1-6bc0-4437-a275-257a9bd0d791/public_url' target='_blank'><i class='fa-brands fa-microsoft'></i> Microsoft SC-200(Security Operations Analyst) </a>")
+    createText("<a href='https://www.credly.com/badges/46b645b3-9609-44c6-8a72-af7a1e1e0a43/public_url' target='_blank'><i class='fa-solid fa-file-lines'></i> ISC2 CC(Certified in Cybersecurity) </a>")
+    createColoredText("Hacking-Socials:","#9CEAF3")
+    createText("<a href='https://tryhackme.com/p/F4bDcod3' target='_blank'> <u>TryHackMe<u></a>")
     createColoredText("Contact:","#9CEAF3")
     createText("<a href='mailto:farhanbeg30@proton.me' target='_blank'><i class='fa-solid fa-envelope-open-text'></i> Email</a>")
     createText("<a href='https://www.linkedin.com/in/farhan-beg/' target='_blank'><i class='fab fa-linkedin-in white'></i> Linkedin</a>")
     createText("<a href='https://www.x.com/_Farhan_b' target='_blank'><i class='fa-brands fa-x-twitter'></i> X </a>")
-    createColoredText("Skills:","#9CEAF3")
-    createTextAndProgressBar("Azure",0.7,"#0dfa05");
-    createTextAndProgressBar("Ethical Hacking",0.3,"yellow");
-    createTextAndProgressBar("Penetration Testing",0.2,"yellow");
-    createTextAndProgressBar("C",0.8,"#0dfa05");
-    createColoredText("Certifications:","#9CEAF3")
-    createText("<a href='https://www.credly.com/badges/530834d1-6bc0-4437-a275-257a9bd0d791/public_url' target='_blank'><i class='fa-brands fa-microsoft'></i> Microsoft SC-200(Security Operations Analyst) </a>")
-    createText("<a href='https://www.credly.com/badges/46b645b3-9609-44c6-8a72-af7a1e1e0a43/public_url' target='_blank'><i class='fa-regular fa-file-certificate'></i> ISC2 CC(Certified in Cybersecurity) </a>")
+    createText("<a href='https://infosec.exchange/@Farhan30' target='_blank'><i class='fa-brands fa-mastodon'></i>  Mastodon </a>")
   }
   else if(value.toLowerCase() === "clear"){
     document.querySelectorAll("p").forEach(e => e.parentNode.removeChild(e));
