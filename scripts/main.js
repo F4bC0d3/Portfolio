@@ -110,8 +110,7 @@ async function getInputValue(){
     createTextAndProgressBar("Penetration Testing",0.2,"yellow");
     createTextAndProgressBar("Linux",0.8,"#0dfa05");
     createTextAndProgressBar("C",0.8,"#0dfa05");
-    createText("<b><u>Other Skills:</b></u><br> Cyber-security, Information Security, Microsoft 365 Defender, Security Operations, Network Security, Access Control, Disaster Recovery, Incident Response, BusinessContinuity,Azure Logic Apps, Kusto Query Language (KQL), Azure Sentinel, Azure Active Directory,Markdown,HTML")
-    
+    createText("<b><u>Other Skills:</b></u><br> Cyber-security, Information Security, Microsoft 365 Defender, Security Operations, Network Security,  Burp Suite, Network Security, Web Application Security, Metasploit, Privilege Escalation, Access Control, Disaster Recovery, Incident Response, BusinessContinuity,Azure Logic Apps, Kusto Query Language (KQL), Azure Sentinel, Azure Active Directory,Markdown,HTML")    
   }
   else if(value.toLowerCase() =="certifications"){
     trueValue(value);
@@ -134,7 +133,7 @@ async function getInputValue(){
     createTextAndProgressBar("Azure",0.7,"#0dfa05");
     createTextAndProgressBar("Penetration Testing",0.2,"yellow");
     createTextAndProgressBar("C",0.8,"#0dfa05");
-    createText("<b><u>Other Skills:</b></u><br> Cyber-security, Information Security, Microsoft 365 Defender, Security Operations, Network Security, Access Control, Disaster Recovery, Incident Response, BusinessContinuity,Azure Logic Apps, Kusto Query Language (KQL), Azure Sentinel, Azure Active Directory,Markdown,HTML")
+    createText("<b><u>Other Skills:</b></u><br> Cyber-security, Information Security, Microsoft 365 Defender, Security Operations, Network Security,  Burp Suite, Network Security, Web Application Security, Metasploit, Privilege Escalation, Access Control, Disaster Recovery, Incident Response, BusinessContinuity,Azure Logic Apps, Kusto Query Language (KQL), Azure Sentinel, Azure Active Directory,Markdown,HTML")
     createColoredText("Certifications:","#9CEAF3")
     createText("<a href='https://www.credly.com/badges/530834d1-6bc0-4437-a275-257a9bd0d791/public_url' target='_blank'><i class='fa-brands fa-microsoft'></i> Microsoft SC-200(Security Operations Analyst) </a>")
     createText("<a href='https://www.credly.com/badges/46b645b3-9609-44c6-8a72-af7a1e1e0a43/public_url' target='_blank'><i class='fa-solid fa-file-lines'></i> ISC2 CC(Certified in Cybersecurity) </a>")
